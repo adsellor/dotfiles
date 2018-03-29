@@ -1,0 +1,5 @@
+*scrollbar: false
+urxt*cursorcolor: white
+urxvt*transparent: true
+urxvt*shading: 35
+urxvt*foreground: white

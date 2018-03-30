@@ -1,7 +1,7 @@
 " Initialize pathogen 
 execute pathogen#infect()
 filetype plugin indent on
-
+set number
 " Mapleader key
 let mapleader = ','
 " Color schemek

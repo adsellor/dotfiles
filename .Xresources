@@ -1,0 +1,9 @@
+ urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
+ urxvt.font: 9x15
+ URxvt.internalBorder: 30 
+ URxvt.highlightColor: black
+ URxvt.cursorColor: white
+ URxvt.transparent: true
+ URxvt.shading: 35
+ URxvt.saveLines: 0
+ URxvt.foreground: white

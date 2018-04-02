@@ -93,8 +93,11 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Aliasese adsellor.
-alias enw="emacs -nw"
-alias tx="tmux"
+alias enw='emacs -nw'
+alias tx='tmux'
+alias txl='tmux list-sessions'
+alias txa='tmux attach'
+alias txd='tmux detach'
 alias gs='git status '
 alias ga='git add '
 alias gb='git branch '
@@ -103,7 +106,8 @@ alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
-
+alias cc='calcurse'
+alias ct='calcurse -t'
 # adsellor. run screenfetch on new terminals
 screenfetch
 #

@@ -28,6 +28,8 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 map <C-n> :NERDTreeToggle<CR>
+:imap jj <Esc>
+noremap <silent><Leader><Leader>s :w<CR>
 " set softtabs 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 " JS/FLowtype
@@ -44,3 +46,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+let g:livepreview_previewer = 'zathura'

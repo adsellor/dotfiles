@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+# if you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="af-magic"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -60,6 +60,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,27 +94,30 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Aliasese adsellor.
-alias enw='emacs -nw'
-alias tx='tmux'
-alias txl='tmux list-sessions'
-alias txa='tmux attach'
-alias txd='tmux detach'
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-alias gk='gitk --all&'
-alias gx='gitx --all'
 alias cc='calcurse'
 alias ct='calcurse -t'
-# adsellor. run screenfetch on new terminals
-screenfetch
+alias ca='calcurse -a'
+alias rg='ranger'
+alias rd='ranger ~/Documents'
+alias rp='ranger ~/Projects'
+alias sd='cd ~/Documents'
+alias sp='cd ~/Projects'
+alias n='nvim'
+alias v='vim'
+alias s='cd'
+alias sik='cd'
+alias cfn='nvim ~/.nvimrc'
+alias pg='ping google.com'
+alias cfz='nvim ~/.zshrc'
+
+# adsellor. run neofetch on new terminals
+neofetch
 #
 export PATH=/home/adsellor/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/6.4.0:/usr/lib/llvm/5/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin
 export PATH=/home/adsellor/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/6.4.0:/usr/lib/llvm/5/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin
-# NVM 
+# NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# set vim mode
+set -o vi

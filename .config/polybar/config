@@ -1,0 +1,186 @@
+[bar/white]
+
+;------------;
+; DIMENSIONS ;
+;------------;
+
+width = 100%
+height = 20
+offset-y = 0
+offset-x = 0
+
+border-top-size = 10
+border-bottom-size = 10
+border-right-size = 0
+border-left-size = 0
+
+;----------;
+; LOCATION ;
+;----------;
+
+bottom = false
+monitor = eDP-1
+wm-restack = none
+override-redirect = false
+
+;-------;
+; FONTS ;
+;-------;
+
+font-0 = Hack:size=12;3
+font-1 = FontAwesome:size=12;3
+font-2 = FontAwesomes:size=12;3
+
+;--------;
+; COLORS ;
+;--------;
+
+background = #cecece
+foreground = #000000
+border-color = #cecece
+
+;---------------;
+; MISCELLANEOUS ;
+;---------------;
+
+fixed-center = true
+padding-left = 2
+padding-right = 2
+module-margin = 1.5
+modules-center = date
+modules-left = i3 mpd spotify
+modules-right = time backlight volume battery cpu
+
+tray-position = none
+tray-detached = true
+
+;---------;
+; MODULES ;
+;---------;
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+enable-scroll = false
+
+label-unfocused-foreground = #000000
+label-focused-foreground = #fefefe
+label-urgent-foreground = #ff0000
+
+[module/time]
+type = internal/date
+
+interval = 1.0
+
+date =  %H:%M
+
+[module/date]
+type = internal/date
+date =  %e %B - %A
+label = %date%
+
+[module/spotify]
+type = custom/script
+interval = 1.0
+format = <label>
+exec = ~/.config/polybar/scripts/spotify.sh
+
+
+[module/mpd]
+type = internal/mpd
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-prev = 
+icon-next = 
+icon-random = 
+icon-repeat = 
+
+toggle-on-foreground =
+toggle-off-foreground = #55
+
+bar-progress-width = 45
+bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+bar-progress-indicator = |
+bar-progress-indicator-foreground = #ff
+bar-progress-indicator-font = 3
+bar-progress-fill = ─
+bar-progress-fill-foreground = #bb
+bar-progress-fill-font = 3
+bar-progress-empty = ─
+bar-progress-empty-font = 3
+bar-progress-empty-foreground = #44
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+
+poll-interval = 1
+
+full-at = 95
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-charging =  <label-charging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+format-muted =  0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/backlight]
+type = internal/xbacklight
+
+label =  %percentage%%
+
+/*#[module/wlan]*/
+/*type = internal/network*/
+
+/*interface = wlp3s0*/
+
+/*interval = 5*/
+
+/*label-connected =  %essid%*/
+/*label-disconnected =  Not Connected*/
+
+[module/cpu]
+type = internal/cpu
+label =  %percentage%%
+
+
+[module/memory]
+type = internal/memory
+label =  %gb_used%
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+label-connected =  %downspeed% |  %upspeed%
+
+[bar/float]
+
+inherit = bar/white
+
+background = #ffffff
+
+tray-position = center

@@ -1,6 +1,5 @@
 """"""" Plugin management stuff """""""
 set nocompatible
-filetype off
 syntax on
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
@@ -27,6 +26,9 @@ Plugin 'davidhalter/jedi-vim'
 
 " Remove extraneous whitespace when edit mode is exited
 Plugin 'thirtythreeforty/lessspace.vim'
+
+" Add elm support
+Plugin 'elmcast/elm-vim'
 
 "NerdTree
 Plugin 'scrooloose/nerdtree'
@@ -99,6 +101,11 @@ set number showmatch
 set shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
 let python_highlight_all = 1
 
+"""""" Elm """"""""
+let g:polyglot_disabled = ['elm']
+let g:elm_detailed_complete = 1
+let g:elm_format_autosave = 1
+let g:elm_syntastic_show_warnings = 1
 
 """"""" Keybindings """""""
 " Set up leaders
@@ -118,7 +125,8 @@ noremap <Leader>5 5gt
 noremap <Leader>6 6gt
 noremap <Leader>7 7gt
 noremap <Leader>8 8gt
-noremap <Leader>9 9gt map <C-n> :NERDTreeToggle<CR>
+noremap <Leader>9 9gt
+map <C-n> :NERDTreeToggle<CR>
 noremap <silent><Leader><Leader>s :w<CR>
 :imap <silent><Leader><Leader>s <ESC>:w<CR><enter>
 let g:livepreview_previewer ='zathura'

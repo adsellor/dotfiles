@@ -35,9 +35,9 @@ font-2 = FontAwesomes:size=12;3
 ; COLORS ;
 ;--------;
 
-background = #cecece
+background = #ffffff
 foreground = #000000
-border-color = #cecece
+border-color = #ffffff
 
 ;---------------;
 ; MISCELLANEOUS ;
@@ -66,7 +66,7 @@ strip-wsnumbers = true
 enable-scroll = false
 
 label-unfocused-foreground = #000000
-label-focused-foreground = #fefefe
+label-focused-foreground = #8c8c8c
 label-urgent-foreground = #ff0000
 
 [module/time]
@@ -153,15 +153,15 @@ type = internal/xbacklight
 
 label =  %percentage%%
 
-/*#[module/wlan]*/
-/*type = internal/network*/
+[module/wlan]
+type = internal/network
 
-/*interface = wlp3s0*/
+interface = wlp3s0
 
-/*interval = 5*/
+interval = 5
 
-/*label-connected =  %essid%*/
-/*label-disconnected =  Not Connected*/
+label-connected =  %essid%
+label-disconnected =  Not Connected
 
 [module/cpu]
 type = internal/cpu
@@ -183,4 +183,4 @@ inherit = bar/white
 
 background = #ffffff
 
-tray-position = center
+tray-position = right

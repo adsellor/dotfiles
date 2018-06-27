@@ -6,7 +6,7 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 set noshowmode
 set number relativenumber
 set numberwidth=3
-highlight LineNr ctermfg=black
+highlight LineNr ctermfg=white
 
 call vundle#begin('~/.config/nvim/bundle')
 
@@ -40,7 +40,6 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'iamcco/mathjax-support-for-mkdp'
 Plugin 'iamcco/markdown-preview.vim'
 
-
 " Status bar mods
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
@@ -50,6 +49,9 @@ Plugin 'ervandew/supertab'
 
 " Deoplete for  autocopmlete
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+"Emmet
+Plugin 'mattn/emmet-vim'
 
 "Polyglot
 Plugin 'sheerun/vim-polyglot'

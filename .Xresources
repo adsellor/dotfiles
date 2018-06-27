@@ -34,7 +34,7 @@
 urxvt.perl-ext-common: font-size
 URxvt.internalBorder: 30
 URxvt.highlightColor: t_black
-URxvt.cursorColor: t_black
+URxvt.cursorColor: t_white
 URxvt.transparent: true
 URxvt.shading: 35
 URxvt.saveLines: 0
@@ -43,10 +43,10 @@ URxvt.foreground: t_white
 *boldItalicFont: true
 *italicFont: true
 URxvt.blurRadius: 20
-URxvt*font: xft:Inconsolata\ for\ Powerline:size=16
-URxvt*boldFont: xft:Inconsolata\ for\ Powerline:size=16
-URxvt*italicFont: xtf:Inconsolata\ for\ Powerline:size=16
-URxvt*bolgdItalicFont: xft:Inconsolata\ for\ Powerline:size=16
+URxvt*font: xft:Inconsolata\ for\ Powerline:size=18
+URxvt*boldFont: xft:Inconsolata\ for\ Powerline:size=18
+URxvt*italicFont: xtf:Inconsolata\ for\ Powerline:size=18
+URxvt*bolgdItalicFont: xft:Inconsolata\ for\ Powerline:size=18
 
 
 *.color0:       t_black
@@ -76,6 +76,6 @@ URxvt*bolgdItalicFont: xft:Inconsolata\ for\ Powerline:size=16
 *.color14:       t_cyan
 *.color6:      t_bcyan
 
-! Light Grey (Selection) + White (Current Line)
+! Black/Light Grey (Selection) + White (Current Line)
 *.color15: t_white
-*.color7: t_bwhite
+*.color7: t_black

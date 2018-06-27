@@ -24,67 +24,100 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn't scale on retina/hidpi displays.
 
-# adsellor ---------------
-# set global keys 
+# --------------- adsellor ---------------
+# set global keys
+
 set $primary Mod4
 set $secondary Mod1
 set $term urxvt
 set $music spotify
-# Change keyboard layout 
+
+# for all ranger windows open in floating mode
+for_window [class="ranger"] floating enable
+
+# Change keyboard layout
+
 exec_always --no-startup-id "setxkbmap -layout dvorak, us"
 exec_always --no-startup-id "setxkbmap -option 'grp:ctrl_alt_toggle'"
+
 # set gaps
+
 gaps inner 15
-gaps outer 20
+gaps outer 5
 # Increase/decrease inner gaps dynamicaly
 #bindsym primary+Shift+- gaps inner current plus 5
 #bindsym primary+- gaps inner current minus 5
 #bindsym Ctrl+d gaps outer current plus 5
 #bindsym Ctrl+Shift+d gaps outer current minus 5
 #bindsym $primary+Shift+d gaps outer current plus 30 ;; gaps inner current plus 20
+
 # Toggle between mods
 bindsym $primary+t split toggle
 bindsym $primary+h split horizontal
 bindsym $primary+v split vertical
 bindsym $primary+apostrophe split horizontal ;; exec $term
 bindsym $primary+comma split vertical ;; exec $term
-# Borderless windows
-for_window [class="^.*"] border pixel 1
+
+# Smart window border
+for_window [class="^.*"] border pixel 5
 smart_borders on
-# Change background on stratup 
+
+client.focused  		#CECECE #CECECE #FFFFFF
+client.focused_inactive #8C8C8C #8C8C8C #FFFFFF
+client.unfocused   		#8C8C8C #8C8C8C #FFFFFF
+client.urgent           #2F343A #900000 #FFFFFF
+
+# Change background on stratup
 exec --no-startup-id ~/.fehbg
+
 # Take a screenshot
-bindsym Print exec "scrot '%d-%m-%Y_%H:%M:%S_screenshot.png' -e 'mv $f ~/Screenshots/'" 
+bindsym Print exec "scrot '%d-%m-%Y_%H:%M:%S_screenshot.png' -e 'mv $f ~/Screenshots/'"
+
 # hibernate to ram and lock
 bindsym $primary+Shift+h exec ~/.config/i3/suspend.sh
 exec xautolock -time 15 -locker '~/.config/i3/i3lock.sh' &
-# Start spotify 
+
+# Start spotify
 bindsym $primary+Shift+s exec $music
-# media keys for spotify 
+
+# media keys for spotify
 bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
 bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 # Start firefox
-bindsym $primary+Shift+f exec firefox 
+bindsym $primary+Shift+f exec firefox
+
 # Start ranger
 bindsym $primary+r exec $term -e ranger ~
+
+# Start calcurse
+bindsym $primary+c exec $term -e calcurse
+
 # Start pulseaudio
 exec --no-startup-id start-pulseaudio-x11
+
 # Start polybar
 #exec_always --no-startup-id ~/.config/polybar/launch.sh
+
 # Load .Xresources on boot
 exec_always --no-startup-id "xrdb ~/.Xresources"
+
 # Lock the screen
 bindsym Ctrl+Shift+l exec --no-startup-id ~/.config/i3/i3lock.sh
-#---------------------------------------------------------
+
+######------------------------------------------------------------------------------------------------------------------------------------######
+
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up l
@@ -230,5 +263,5 @@ mode "resize" {
 }
 
 bindsym $primary+$secondary+r mode "resize"
-exec_always --no-startup-id polybar white
 
+exec_always --no-startup-id polybar white

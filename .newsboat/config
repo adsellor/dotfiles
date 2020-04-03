@@ -20,7 +20,7 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-browser w3m
+browser "open /Applications/Firefox.app"
 
 macro , open-in-browser
 

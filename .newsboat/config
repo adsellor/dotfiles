@@ -1,8 +1,6 @@
 #show-read-feeds no
 auto-reload yes
 
-external-url-viewer "urlscan -dc -r 'linkhandler {}'"
-
 bind-key j down
 bind-key k up
 bind-key j next articlelist
@@ -22,6 +20,7 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-browser firefox
+browser w3m
 
 macro , open-in-browser
+

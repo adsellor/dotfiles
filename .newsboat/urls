@@ -1,3 +1,4 @@
+# general tech feeds
 http://thefeedbackloop.xyz/rss/ "Technology"
 http://feeds.feedburner.com/Techcrunch "Technology"
 http://feeds.feedburner.com/juristrumpflohner "Technology"
@@ -70,9 +71,14 @@ http://www.potaroo.net/rss.xml "Technology"
 http://www.theverge.com/rss/full.xml "Technology"
 http://feeds.feedburner.com/steveklabnik/words "Technology"
 http://thechangelog.com/rss "Technology"
+
+# Programming feeds
 http://programmingisterrible.com/rss "Programming"
 https://overreacted.io/rss.xml "Programming"
 http://www.tedinski.com/feed.xml "Programming"
+
+# Context
+https://nautil.us/rss/all "Context"
 https://kieranhealy.org/index.xml "Context"
 http://reallifemag.com/feed/ "Context"
 https://medium.com/feed/@saranormous "Context"
@@ -113,6 +119,8 @@ http://blog.stephenwolfram.com/feed/ "Context"
 http://aworkinglibrary.com/feed/index.xml "Context"
 http://hub.jhu.edu/magazine/feed "Context"
 http://itself.wordpress.com/feed/ "Philosophy"
+
+# Philosophy feeds
 https://lovingpsychoanalysis.wordpress.com/feed/ "Philosophy"
 http://www.inthemedievalmiddle.com/feeds/posts/default "Philosophy"
 http://libcom.org/blog/out-woods/feed "Philosophy"
@@ -129,6 +137,8 @@ http://www.shaviro.com/Blog/?feed=rss2 "Philosophy"
 http://sociological-eye.blogspot.com/feeds/posts/default "Philosophy"
 http://anarchistwithoutcontent.wordpress.com/feed/ "Philosophy"
 http://www.bruno-latour.fr/articles/feed "Philosophy"
+
+# "Swipe" feeds
 https://theintercept.com/feed/?rss "Swipe"
 http://www.atlasobscura.com/feeds/latest "Swipe"
 http://www.economist.com/rss/business_rss.xml "Swipe"
@@ -140,7 +150,8 @@ http://boingboing.net/feed "Swipe"
 http://www.economist.com/rss/finance_and_economics_rss.xml "Swipe"
 http://www.brookings.edu/rss/LatestFromBrookings.aspx "Swipe"
 http://www.farnamstreetblog.com/feed/ "Swipe"
-http://feeds.feedburner.com/CssTricks "Favorites"
+
+# Podcasts
 http://feeds.wnyc.org/onthemedia "Podcasts"
 http://www.bbc.co.uk/programmes/p04b1g3c/episodes/downloads.rss "Podcasts"
 http://feeds.harvardbusiness.org/harvardbusiness/ideacast "Podcasts"
@@ -160,8 +171,60 @@ http://feeds.wnyc.org/notetoself-podcast "Podcasts"
 http://feeds.revealradio.org/revealpodcast "Podcasts"
 http://www.wnyc.org/feeds/shows/invisibilia "Podcasts"
 http://feeds.panoply.fm/intercepted "Podcasts"
+
+# Economics feeds
 http://www.economist.com/rss/the_world_this_week_rss.xml "Econ"
 https://www.brookings.edu/blog/ben-bernanke/feed/ "Econ"
 http://voxeu.org/feed/recent/rss.xml "Econ"
 http://feeds2.feedburner.com/TheRationalWalkFeed "Econ"
 http://piketty.blog.lemonde.fr/feed/ "Econ"
+
+# Math
+http://and-what-happened.blogspot.com/feeds/posts/default Maths
+http://algorithmist.wordpress.com/feed/ Maths
+http://www.algorithmist.net/?feed=rss2 Maths
+http://www.johndcook.com/blog/feed/ Maths
+http://blog.wolfram.com/feed/ Maths
+http://blog.kenperlin.com/?feed=rss2 Maths
+http://boredzo.org/blog/feed/atom Maths
+http://www.elegantcoding.com/feeds/posts/default Maths
+http://jeremykun.com/feed/ Maths
+http://unapologetic.wordpress.com/feed/ Maths
+http://vihart.com/blog/rss.xml Maths
+http://www.essentialmath.com/blog/?feed=rss2 Maths
+http://feeds.feedburner.com/matthen Maths
+
+# sysadmin feeds
+http://blog.linuxmint.com/?feed=rss2 linux
+http://2bits.com/contents/articles/feed drupal
+https://blog.flameeyes.eu/articles.atom autotools
+http://blog.martinfjordvald.com/feed/ nginx
+http://blog.nicolargo.com/feed linux
+http://blog.sanctum.geek.nz/feed/ linux tmux
+http://www.debian-administration.org/atom.xml linux debian
+http://www.archlinux.org/feeds/news/ linux archlinux
+http://dtrace.org/blogs/brendan/feed/ dtrace
+http://feeds2.feedburner.com/Command-line-fu cli
+http://kbeezie.com/feed/ nginx
+https://www.madboa.com/blog/index.xml
+http://samrowe.com/wordpress/feed/
+https://blogs.msdn.microsoft.com/commandline/feed/
+
+# Machine learning
+http://www.cleverhans.io/feed.xml machinelearning
+http://bair.berkeley.edu/blog/feed.xml machinelearning
+http://feeds.feedburner.com/Pyimagesearch machinelearning
+http://deeplearning.net/feed/ machinelearning
+http://karpathy.github.io/feed.xml machinelearning
+https://medium.com/feed/@karpathy machinelearning
+https://guillaumegenthial.github.io/feed.xml machinelearning
+https://www.fast.ai/atom.xml machinelearning
+https://distill.pub/rss.xml machinelearning
+http://www.wildml.com/feed/ machinelearning
+http://deliprao.com/feed machinelearning
+https://www.deeplearning.ai/feed/ machinelearning
+https://sgugger.github.io/feeds/all.atom.xml machinelearning
+https://medium.com/feed/@radekosmulski machinelearning
+https://blog.ml.cmu.edu/feed/ machinelearning
+https://medium.com/feed/@gidishperber machinelearning
+https://machinetalk.org/feed/ machinelearning
